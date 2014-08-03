@@ -2,8 +2,6 @@
 //  AppDelegate.swift
 //  taskyou
 //
-//  Created by 羽田 健太郎 on 2014/08/03.
-//  Copyright (c) 2014年 me.jumbeeee.ken. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        MagicalRecord.setupCoreDataStackWithAutoMigratingSqliteStoreNamed("task.sqlite")
         return true
     }
 
@@ -39,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        MagicalRecord.cleanUp()
     }
 
 
