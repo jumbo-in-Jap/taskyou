@@ -6,21 +6,6 @@
 
 import UIKit
 
-let CELL_IDENTIFER = "identifer"
-
-//class Task
-//{
-//    var clientName:String
-//    var content:String
-//    var date:NSDate
-//    
-//    init(n:String, c:String, d:NSDate)
-//    {
-//        self.clientName = n
-//        self.content = c
-//        self.date = d
-//    }
-//}
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -92,7 +77,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         if(segue.identifier == "list_to_add")
         {
-            let vc:AddTaskViewController = segue!.destinationViewController as AddTaskViewController
+            //let vc:AddTaskViewController = segue!.destinationViewController as AddTaskViewController
             //vc.backgroundColor = !UIColor.blackColor()
             //self.navigationController.pushViewController(vc, animated: true)
         }

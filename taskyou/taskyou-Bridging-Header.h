@@ -3,5 +3,8 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
+#import <SSKeychain.h>
+
 #import "CoreData+MagicalRecord.h"
 #import "Task.h"
+#import "Friend.h"

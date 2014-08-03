@@ -40,4 +40,12 @@ class AddTaskViewController: UIViewController, UITextViewDelegate{
             })
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
+    {
+        if(segue.identifier == "add_push_friend")
+        {
+            
+        }
+    }
+
 }

@@ -18,6 +18,9 @@
 		8C7D2100198E20EF00F05E60 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D20FE198E20EF00F05E60 /* Task.xcdatamodeld */; };
 		8C7D2103198E214700F05E60 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D2102198E214700F05E60 /* Task.m */; };
 		8CFBE47A198E2420008D702A /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFBE479198E2420008D702A /* AddTaskViewController.swift */; };
+		8CFBE47D198E60EA008D702A /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFBE47C198E60EA008D702A /* FriendViewController.swift */; };
+		8CFBE480198E6127008D702A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFBE47F198E6127008D702A /* Utils.swift */; };
+		8CFBE483198E6824008D702A /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CFBE482198E6824008D702A /* Friend.m */; };
 		DEB8858794F345EE88C3DA8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C255C8B1CC14A9981D45193 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,10 @@
 		8C7D2101198E214700F05E60 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Model/Task.h; sourceTree = "<group>"; };
 		8C7D2102198E214700F05E60 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Model/Task.m; sourceTree = "<group>"; };
 		8CFBE479198E2420008D702A /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		8CFBE47C198E60EA008D702A /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendViewController.swift; path = friend/FriendViewController.swift; sourceTree = "<group>"; };
+		8CFBE47F198E6127008D702A /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = utils/Utils.swift; sourceTree = "<group>"; };
+		8CFBE481198E6824008D702A /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		8CFBE482198E6824008D702A /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		9064B08D168B455D99ACD4C9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +111,8 @@
 		8C43880B198DF3A5001C5A9C /* taskyou */ = {
 			isa = PBXGroup;
 			children = (
+				8CFBE47E198E6109008D702A /* utils */,
+				8CFBE47B198E60CF008D702A /* friend */,
 				8C7D20FD198E20CF00F05E60 /* Model */,
 				8C43882B198DF98C001C5A9C /* taskcell */,
 				8C43880E198DF3A5001C5A9C /* AppDelegate.swift */,
@@ -157,10 +166,28 @@
 			isa = PBXGroup;
 			children = (
 				8C7D20FE198E20EF00F05E60 /* Task.xcdatamodeld */,
+				8CFBE481198E6824008D702A /* Friend.h */,
+				8CFBE482198E6824008D702A /* Friend.m */,
 				8C7D2101198E214700F05E60 /* Task.h */,
 				8C7D2102198E214700F05E60 /* Task.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8CFBE47B198E60CF008D702A /* friend */ = {
+			isa = PBXGroup;
+			children = (
+				8CFBE47C198E60EA008D702A /* FriendViewController.swift */,
+			);
+			name = friend;
+			sourceTree = "<group>";
+		};
+		8CFBE47E198E6109008D702A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				8CFBE47F198E6127008D702A /* Utils.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C7D2103198E214700F05E60 /* Task.m in Sources */,
+				8CFBE483198E6824008D702A /* Friend.m in Sources */,
 				8C7D2100198E20EF00F05E60 /* Task.xcdatamodeld in Sources */,
+				8CFBE480198E6127008D702A /* Utils.swift in Sources */,
 				8C7D20FA198E185600F05E60 /* Bridge.m in Sources */,
 				8C43882E198DF9C0001C5A9C /* TaskTableViewCell.swift in Sources */,
+				8CFBE47D198E60EA008D702A /* FriendViewController.swift in Sources */,
 				8C438811198DF3A5001C5A9C /* ViewController.swift in Sources */,
 				8C43880F198DF3A5001C5A9C /* AppDelegate.swift in Sources */,
 				8CFBE47A198E2420008D702A /* AddTaskViewController.swift in Sources */,
