@@ -2,14 +2,14 @@
 //  AddTaskViewController.swift
 //  taskyou
 //
-//  Created by 羽田 健太郎 on 2014/08/03.
-//  Copyright (c) 2014年 me.jumbeeee.ken. All rights reserved.
 //
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
+class AddTaskViewController: UIViewController, UITextViewDelegate{
 
+    @IBOutlet var contentTextView:UITextView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +22,22 @@ class AddTaskViewController: UIViewController {
     }
     
 
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func close()
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    */
+    
+    @IBAction func finish()
+    {
+        let task: Task = Task.MR_createEntity() as Task
+        task.clientName = "Me"
+        task.content = self.contentTextView.text
+        task.date = NSDate()
+        task.managedObjectContext.MR_saveWithOptions(MRSaveContextOptions(1),
+            completion:
+            {(success:Bool, error:NSError!) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
+    }
 
 }

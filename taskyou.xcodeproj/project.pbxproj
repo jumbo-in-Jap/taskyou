@@ -15,9 +15,9 @@
 		8C43882E198DF9C0001C5A9C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43882C198DF9C0001C5A9C /* TaskTableViewCell.swift */; };
 		8C43882F198DF9C0001C5A9C /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C43882D198DF9C0001C5A9C /* TaskTableViewCell.xib */; };
 		8C7D20FA198E185600F05E60 /* Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D20F9198E185600F05E60 /* Bridge.m */; };
-		8C7D20FC198E1B2E00F05E60 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D20FB198E1B2E00F05E60 /* AddTaskViewController.swift */; };
 		8C7D2100198E20EF00F05E60 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D20FE198E20EF00F05E60 /* Task.xcdatamodeld */; };
 		8C7D2103198E214700F05E60 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D2102198E214700F05E60 /* Task.m */; };
+		8CFBE47A198E2420008D702A /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFBE479198E2420008D702A /* AddTaskViewController.swift */; };
 		DEB8858794F345EE88C3DA8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C255C8B1CC14A9981D45193 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -47,10 +47,10 @@
 		8C7D20F7198E185600F05E60 /* taskyou-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "taskyou-Bridging-Header.h"; sourceTree = "<group>"; };
 		8C7D20F8198E185600F05E60 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		8C7D20F9198E185600F05E60 /* Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bridge.m; sourceTree = "<group>"; };
-		8C7D20FB198E1B2E00F05E60 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		8C7D20FF198E20EF00F05E60 /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
 		8C7D2101198E214700F05E60 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Model/Task.h; sourceTree = "<group>"; };
 		8C7D2102198E214700F05E60 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Model/Task.m; sourceTree = "<group>"; };
+		8CFBE479198E2420008D702A /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		9064B08D168B455D99ACD4C9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +108,7 @@
 				8C43882B198DF98C001C5A9C /* taskcell */,
 				8C43880E198DF3A5001C5A9C /* AppDelegate.swift */,
 				8C438810198DF3A5001C5A9C /* ViewController.swift */,
-				8C7D20FB198E1B2E00F05E60 /* AddTaskViewController.swift */,
+				8CFBE479198E2420008D702A /* AddTaskViewController.swift */,
 				8C438812198DF3A5001C5A9C /* Main.storyboard */,
 				8C438815198DF3A5001C5A9C /* Images.xcassets */,
 				8C43880C198DF3A5001C5A9C /* Supporting Files */,
@@ -304,7 +304,7 @@
 				8C43882E198DF9C0001C5A9C /* TaskTableViewCell.swift in Sources */,
 				8C438811198DF3A5001C5A9C /* ViewController.swift in Sources */,
 				8C43880F198DF3A5001C5A9C /* AppDelegate.swift in Sources */,
-				8C7D20FC198E1B2E00F05E60 /* AddTaskViewController.swift in Sources */,
+				8CFBE47A198E2420008D702A /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

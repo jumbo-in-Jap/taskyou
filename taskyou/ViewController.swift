@@ -25,7 +25,7 @@ let CELL_IDENTIFER = "identifer"
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView : UITableView
-    var taskList = []
+    var taskList:[Task] = []
     //var stubCell: taskTableViewCell
 
     
@@ -33,24 +33,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         let nib = UINib(nibName: "TaskTableViewCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: TASK_TB_CELL_IDEN)
-        
-        self.taskList = Task.MR_findAll()
-        
-        // TODO: dummy data
-        // get from Coredata
-//        for i in 0...2
-//        {
-//            var o:Task = Task(n: "test",c: "test ksoakosa ksoakoskaoksoa kosakoksoas",d: NSDate());
-//            self.taskList.append(o);
-//        }
-//        for i in 0...2
-//        {
-//            var o:Task = Task(n: "test",c: "This\nis \na\n pen\n \ndesu",d: NSDate());
-//            self.taskList.append(o);
-//        }
-        
-        
-        
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.taskList = Task.MR_findAll() as [Task]
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,16 +62,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat
     {
         var cell: TaskTableViewCell = self.tableView.dequeueReusableCellWithIdentifier(TASK_TB_CELL_IDEN) as TaskTableViewCell
-        cell.configureCellWithTask(self.taskList[indexPath.row]  as Task)
+        cell.configureCellWithTask(self.taskList[indexPath.row] as Task)
         cell.layoutSubviews()
-        var height:CGFloat = cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height;
-      //  var height:CGFloat = 80.0
+        var height:CGFloat = cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height + 20;
         return height
     }
     
     func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
         var task:Task = self.taskList[indexPath.row] as Task
 //        self.performSegueWithIdentifier(text, sender: self)
+    }
+    
+    func tableView(tableView: UITableView!, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath!, withSender sender: AnyObject!) -> Bool
+    {
+        return true;
+    }
+    
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        if (editingStyle == UITableViewCellEditingStyle.Delete)
+        {
+            self.taskList.removeAtIndex(indexPath.row)
+            (self.taskList[indexPath.row] as Task).MR_deleteEntity()
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
